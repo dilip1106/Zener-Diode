@@ -277,22 +277,22 @@ tr{
     /* cursor: pointer; */
 }
 .seven{
-    transform-origin:-1080px 135px;
+    transform-origin:-940px 110px;
 }
 .eight{
-    transform-origin:-950px 170px;
+    transform-origin:-760px 10px;
 }
 .nine{
-    transform-origin:-920px 170px;
+    transform-origin:-1015px 65px;
 }
 .ten{
-    transform-origin: -1100px 170px;
+    transform-origin: -820px 100px;
 }
 .eleven{
-    transform-origin: -1030px 170px;
+    transform-origin: -1000px -5px;
 }
 .twelve{
-    transform-origin: -900px 90px;
+    transform-origin: -800px 10px;
 }
 
 /* .six{

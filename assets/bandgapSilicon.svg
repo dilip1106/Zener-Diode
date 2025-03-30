@@ -27474,19 +27474,25 @@
 		
 		<!-- <ellipse transform="scale(1,-1)" class="pulse two" cx="88.821136" cy="-84.252419" id="circle1614" rx="1.86498" ry="1.9305" style="stroke-width:0.145958" /> -->
 		<!-- <circle onclick="trial(2)" transform="scale(1,-1)" class="pulse three" cx="125" cy="-79" r="10" id="circle1849"/> -->
-		<circle onclick="trial(2)" transform="scale(1,-1)" class="pulse three" cx="-1145" cy="30" r="10" id="circle1604"/>
+		<circle onclick="trial(2)" transform="scale(1,-1)" class="pulse three" cx="-1145" cy="30" r="10" id="circle1605"/>
 
 		<circle onclick="trial(3)" transform="scale(1,-1)" class="pulse four" cx="-1100" cy="35" r="10" id="circle342"/>
 		<circle onclick="trial(1)" transform="scale(1,-1)" class="pulse two" cx="-1090" cy="-5" r="13" id="circle1614-0" />
-		<circle transform="scale(1,-1)" class="pulse five" onclick="trial(4)" cx="-1025" cy="110" r="4.8600001" id="circle344" style="stroke-width:0.18" />
+		<circle onclick="trial(10)" transform="scale(1,-1)" class="pulse eleven" cx="-1000" cy="-5" r="13" id="circle1614-1" />
+		<circle transform="scale(1,-1)" class="pulse five" onclick="trial(4)" cx="-1025" cy="110" r="5" id="circle344"/>
+		<circle transform="scale(1,-1)" class="pulse seven" onclick="trial(6)" cx="-940" cy="110" r="5" id="circle345"/>
 		<circle onclick="trial(0)" transform="scale(1,-1)" class="pulse one" cx="-1130" cy="-10" r="10" id="circle1604"/>
 		<circle onclick="trial(5)" transform="scale(1,-1)" class="pulse six" cx="-775" cy="100" id="circle346" r="10" />
+		<circle onclick="trial(9)" transform="scale(1,-1)" class="pulse ten" cx="-820" cy="100" id="circle348" r="10" />
+		<circle onclick="trial(7)" transform="scale(1,-1)" class="pulse eight" cx="-760" cy="10" id="circle347" r="10" />
+		<circle onclick="trial(11)" transform="scale(1,-1)" class="pulse twelve" cx="-800" cy="10" id="circle350" r="10" />
+		<circle onclick="trial(8)" transform="scale(1,-1)" class="pulse nine" cx="-1015" cy="65" r="10" id="circle349"/>
 		</g>
-          <path style="fill:none;stroke:#ff0000;stroke-width:0.826;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" d="m 85.129686,101.33542 c -3.006966,-7.653857 12.87681,-4.169689 7.342188,-0.0661" id="path5" sodipodi:nodetypes="cc" transform="translate(-3.4995335,-4.7625)" />
-		<path style="fill:none;stroke:#ff0000;stroke-width:0.826;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" d="m 101.93073,122.50208 c 14.70323,11.83161 30.07935,9.98099 45.83906,0.33073" id="path11" sodipodi:nodetypes="cc" transform="translate(-3.4995335,-4.7625)" />
-		<path style="fill:none;stroke:#ff0000;stroke-width:0.826;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" d="m 118.73177,122.30364 c 7.96289,-3.34105 8.21007,-6.98738 12.92345,-9.51906 6.44585,-3.46224 16.31122,-4.96468 20.61249,-7.54656" id="path27" sodipodi:nodetypes="cac" transform="translate(-3.4995335,-4.7625)" />
-		<path style="fill:none;stroke:#ff0000;stroke-width:0.826;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" d="m 105.5026,113.50625 c 5.61652,16.31266 18.4959,16.28388 34.66042,8.86354" id="path28" sodipodi:nodetypes="cc" transform="translate(-3.4995335,-4.7625)" />
-		<path style="fill:none;stroke:#ff0000;stroke-width:0.826;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" d="m 81.557811,108.47917 c 1.586729,-8.2143 9.884503,-4.70826 8.532813,-0.0661" id="path29" sodipodi:nodetypes="cc" transform="translate(-3.4995335,-4.7625)" />
-		<path style="fill:none;stroke:#ff0000;stroke-width:0.826;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" d="m 108.87604,101.93073 c 12.02886,-6.123475 23.92591,-8.786701 35.25573,3.43958" id="path30" sodipodi:nodetypes="cc" transform="translate(-3.4995335,-4.7625)" />
+          <path style="fill:none;stroke:#ff0000;stroke-width:0.826;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" d="m 85.129686,101.33542 c -3.006966,-7.653857 12.87681,-4.169689 7.342188,-0.0661" id="wire1" sodipodi:nodetypes="cc" transform="translate(-3.4995335,-4.7625)" />
+		<path style="fill:none;stroke:#ff0000;stroke-width:0.826;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" d="m 101.93073,122.50208 c 14.70323,11.83161 30.07935,9.98099 45.83906,0.33073" id="wire3" sodipodi:nodetypes="cc" transform="translate(-3.4995335,-4.7625)" />
+		<path style="fill:none;stroke:#ff0000;stroke-width:0.826;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" d="m 118.73177,122.30364 c 7.96289,-3.34105 8.21007,-6.98738 12.92345,-9.51906 6.44585,-3.46224 16.31122,-4.96468 20.61249,-7.54656" id="wire4" sodipodi:nodetypes="cac" transform="translate(-3.4995335,-4.7625)" />
+		<path style="fill:none;stroke:#ff0000;stroke-width:0.826;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" d="m 105.5026,113.50625 c 5.61652,16.31266 18.4959,16.28388 34.66042,8.86354" id="wire5" sodipodi:nodetypes="cc" transform="translate(-3.4995335,-4.7625)" />
+		<path style="fill:none;stroke:#ff0000;stroke-width:0.826;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" d="m 81.557811,108.47917 c 1.586729,-8.2143 9.884503,-4.70826 8.532813,-0.0661" id="wire2" sodipodi:nodetypes="cc" transform="translate(-3.4995335,-4.7625)" />
+		<path style="fill:none;stroke:#ff0000;stroke-width:0.826;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" d="m 108.87604,101.93073 c 12.02886,-6.123475 23.92591,-8.786701 35.25573,3.43958" id="wire6" sodipodi:nodetypes="cc" transform="translate(-3.4995335,-4.7625)" />
 	</g>
 </svg>

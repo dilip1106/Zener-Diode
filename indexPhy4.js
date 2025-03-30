@@ -1,6 +1,6 @@
 let type;
 
-wireTerminalCheck = [{ six: false , two: false},{  three: false , four: false},{one: false , five: false},{seven: false , eight: false},{nine:false,ten:false},{eleven:false,twelve:false}];
+wireTerminalCheck = [{ one: false , two: false},{  three: false , four: false},{five: false , six: false},{seven: false , eight: false},{nine:false,ten:false},{eleven:false,twelve:false}];
 
 terminalMap = {
   0: "one",
