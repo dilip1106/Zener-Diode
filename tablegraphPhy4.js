@@ -25,8 +25,8 @@ const range = document.getElementById('range');
       alert("Complete the circuit first")
     }
   });
-
-
+var currarrgraph= []
+var voltarrgraph= []
   document.getElementById("addtable").addEventListener("click", addTable);
   let rowCountIndex=0;
   let idx;
@@ -40,7 +40,9 @@ const range = document.getElementById('range');
           
           let curr = sessionStorage.getItem("current")
           let volt = sessionStorage.getItem("voltage")
-    
+          currarrgraph.push(curr)
+          voltarrgraph.push(volt)
+          // console.log(currarrgraph)  
           srno.value =rowCountIndex+1;
           current.value = curr;
           voltage.value = volt;
@@ -180,11 +182,11 @@ let ctx = document.getElementById("myChart").getContext("2d");
 let myChart = new Chart(ctx, {
   type: "line",
   data: {
-    labels: xValues,
+    labels: voltarrgraph,
     datasets: [
       {
         label: "log(Is / T^2) vs 1/T",
-        data: logValues.reverse(),
+        data: currarrgraph,
         borderColor: "rgba(75, 192, 192, 1)",
         backgroundColor: "rgba(75, 192, 192, 0.2)",
         borderWidth: 2,
@@ -201,9 +203,7 @@ let myChart = new Chart(ctx, {
             labelString: "1/T (1/K)",
           },
           position: "top", // Position x-axis at the top
-          ticks: {
-            reverse: true, // Reverse the x-axis
-          },
+          
         },
       ],
       yAxes: [

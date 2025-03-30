@@ -200,11 +200,11 @@ function rangeSelector() {
     let currtext = document.getElementById("curr");
 
     volttext.textContent = voltarr[newIndex - 1];
-    currtext.textContent = currreverse[newIndex - 1]; 
+    currtext.textContent = curarrforward[newIndex - 1]; 
     
    
 
-    sessionStorage.setItem("current", currreverse[newIndex-1]);
+    sessionStorage.setItem("current", curarrforward[newIndex-1]);
     sessionStorage.setItem("voltage", voltarr[newIndex - 1]);
   }, 500);
 }
