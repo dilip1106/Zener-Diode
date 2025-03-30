@@ -87,10 +87,10 @@ function keyPut() {
 }
 
 function replacement() {
-  // document.getElementById("burner-btn").style.stroke = "red";
-  // document.getElementById("burner-btn").style.strokeWidth = "1%";
-  // document.getElementById("burner-btn").onclick = function () {
-  //   document.getElementById("hotburner").style.display = "block";
+  // document.getElementById("image1-2").style.stroke = "red";
+  // document.getElementById("image1-2").style.strokeWidth = "1%";
+  // document.getElementById("image1-2").onclick = function () {
+  //   document.getElementById("image1-2").style.display = "block";
   //   checkbtnPressed(1);
   // };
 
