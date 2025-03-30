@@ -12,6 +12,46 @@ setTimeout(() => {
   fillTable();
 }, 3700);
 
+
+const range = document.getElementById('range');
+
+  range.addEventListener('input', (event) => {
+
+    if(sessionStorage.getItem("circuitComplete") == "true"){
+      const newIndex = event.target.value;
+      sessionStorage.setItem("newIndex",newIndex)
+    }
+    else{
+      alert("Complete the circuit first")
+    }
+  });
+
+
+  document.getElementById("addtable").addEventListener("click", addTable);
+  let rowCountIndex=0;
+  let idx;
+    function addTable(){
+      if(sessionStorage.getItem("circuitComplete") === "true"){
+        
+          srno = document.getElementsByClassName("srno1")[rowCountIndex];
+          current = document.getElementsByClassName(`curr1`)[rowCountIndex];
+          voltage = document.getElementsByClassName(`voltage1`)[rowCountIndex];
+          
+          
+          let curr = sessionStorage.getItem("current")
+          let volt = sessionStorage.getItem("voltage")
+    
+          srno.value =rowCountIndex+1;
+          current.value = curr;
+          voltage.value = volt;
+          rowCountIndex++;
+          
+      }
+      else{
+        alert("Complete the circuit first")
+      }
+      
+    }
 function fillTable() {
   filltableintrval = setInterval(() => {
     if (localStorage.getItem("fullScreen") == "true") {

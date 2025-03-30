@@ -111,8 +111,9 @@ function replacement() {
   //   keyPut();
   // };
   document.getElementById('black-board').classList.add('hidden')
-    document.getElementById('table-board').classList.add('replacement')
+  // document.getElementById('table-board').classList.add('replacement')
   localStorage.setItem("fullScreen", true);
+  sessionStorage.setItem("circuitComplete",true);
 }
 
 function getRndInteger(min, max) {
@@ -158,68 +159,8 @@ let temprature = 27.0;
 
 let flag = 1;
 
-function startWorking() {
-  let temptext = document.getElementById("temp");
-  let temptextcopy = document.getElementById("tempcopy");
-  let curtext = document.getElementById("volt");
-  let i = 0;
-  var srno = 0;
-  let intervalId = setInterval(() => {
-    temprature++;
-    temptext.textContent = temprature.toFixed(2);
-    temptextcopy.textContent = temprature.toFixed(2);
-    if (flag == 0) {
-      curno = curarr[i++] + getRndInteger(0.5, 1.5);
-      flag = 1;
-    } else {
-      curno = curarr[i++] - getRndInteger(0.5, 1.5);
-      flag = 0;
-    }
-    if (temprature % 5 === 0.0) {
-      filldata(srno, temprature, curno);
-      srno++;
-      console.log("fill data callede");
-      console.log(curarr);
-    }
-    curtext.textContent = curno.toFixed(2);
-    // Stop the interval after reaching a certain temprature
-    if (temprature >= 68.0) {
-      clearInterval(intervalId);
-      document.getElementById("hotburner").style.display = "none";
-      // startdroping();
-    }
-  }, 1000); // Increase temprature every 100 milliseconds
-}
 
-function startdroping() {
-  let temptext = document.getElementById("temp");
-  let curtext = document.getElementById("volt");
-  let i = curarr.length - 1;
-  let flag = 1;
-  var srno = 0;
-  let intervalId = setInterval(() => {
-    temptext.textContent = temprature.toFixed(2);
-    if (flag == 0) {
-      curno = curarr[i--] + getRndInteger(0.1, 0.3);
-      flag = 1;
-    } else {
-      curno = curarr[i--] - getRndInteger(0.1, 0.3);
-      flag = 0;
-    }
-    if (temprature % 5 === 0.0) {
-      filldata(srno, temprature, curno);
-      srno++;
-      console.log("fill data callede");
-    }
-    curtext.textContent = curno.toFixed(2);
-    temprature--;
 
-    // Stop the interval after reaching a certain temprature
-    if (temprature <= 27.0) {
-      clearInterval(intervalId);
-    }
-  }, 100); // Increase temprature every 100 milliseconds
-}
 
 function filldata(srno, temprature, curno) {
   rowData = { sno: 0, tempc: 65, curr: 0 };
@@ -231,54 +172,20 @@ function filldata(srno, temprature, curno) {
   localStorage.setItem("rowData", JSON.stringify(rowData));
 }
 
-function startWorkingGer() {
-  // let temptext = document.getElementById("temp");
-  // let temptextcopy = document.getElementById("tempcopy");
-  // let curtext = document.getElementById("volt");
-  // let i=0;
-  // var srno=0;
-  // let intervalId = setInterval(() => {
-  //   temprature++;
-  //   temptext.textContent = temprature.toFixed(2);
-  //   temptextcopy.textContent = temprature.toFixed(2);
-  //   if (flag == 0) {
-  //     curno = currarrger[i++] + getRndInteger(0.5, 1.5);
-  //     flag = 1;
-  //   } else {
-  //     curno = currarrger[i++] - getRndInteger(0.5, 1.5);
-  //     flag = 0;
-  //   }
-  //   if(temprature%5===0.00){
-  //     filldata(srno,temprature,curno)
-  //     srno++
-  //     console.log("fill data callede");
-  //     console.log(currarrger)
-  //   }
-  //   curtext.textContent = curno.toFixed(2);
-  //   // Stop the interval after reaching a certain temprature
-  //   if (temprature >= 68.0) {
-  //     clearInterval(intervalId);
-  //     document.getElementById("hotburner").style.display = "none";
-  //     hi();
-  //     // startdroping();
-  //   }
-  // }, 1000);
-  alert("Germanium readings");
-}
+
 
 //ye wala code range ke sath ke lia hai
 
-// setTimeout(() => {
-//   rangeSelector();
-// }, 100);
+setTimeout(() => {
+  rangeSelector();
+}, 100);
 const voltarr = [0.1, 0.2, 0.3, 0.4, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75];
 const curarrforward = [0, 0, 0, 0, 0.4, 0.7, 2.3, 5.5, 15.8, 18, 18.9];
 const currreverse = [1, 1, 1, 0, 0.4, 0.7, 2.3, 15.5, 15.8, 25, 35.9];
 
 function rangeSelector() {
   newIndexinterval = setInterval(() => {
-    const img = document.getElementById("image1-7");
-    let imgxcor = img.getAttribute("x");
+    
 
     let newIndex = sessionStorage.getItem("newIndex"); // Retrieve newIndex
     newIndex = Math.floor(newIndex / 10); // Map to range [1, 10]
@@ -292,20 +199,12 @@ function rangeSelector() {
     let volttext = document.getElementById("volt");
     let currtext = document.getElementById("curr");
 
-    volttext.textContent = voltarr[newIndex - 1]; // Adjust for 0-based index
-    imgxcor = 77 + newIndex * 0.5;
-    img.setAttribute("x", `${imgxcor}`);
-    let curr = 0;
-    if (sessionStorage.getItem("type") === "false") {
-      curr = Math.abs(curarrforward[newIndex - 1] - getRndInteger(0.01, 0.03));
-      currtext.textContent = curr.toFixed(2);
-    } else {
-      curr = Math.abs(currreverse[newIndex - 1] - getRndInteger(0.01, 0.03));
-      currtext.textContent = curr.toFixed(2);
-    }
-    let currcopy = curr.toFixed(2);
+    volttext.textContent = voltarr[newIndex - 1];
+    currtext.textContent = currreverse[newIndex - 1]; 
+    
+   
 
-    sessionStorage.setItem("current", currcopy);
+    sessionStorage.setItem("current", currreverse[newIndex-1]);
     sessionStorage.setItem("voltage", voltarr[newIndex - 1]);
   }, 500);
 }
