@@ -2024,7 +2024,7 @@
          id="tspan88-1"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.6933px;font-family:Calibri;-inkscape-font-specification:'Calibri, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;baseline-shift:sub;fill:#b01111;fill-opacity:1;stroke-width:0.567386"
          x="227.89455"
-         y="302.36725">V<tspan
+         y="290.36725">V<tspan
    style="font-size:7.60067px;baseline-shift:sub;stroke-width:0.567386"
    id="tspan87-8">IN <tspan
    style="font-size:4.94041px;baseline-shift:sub;stroke-width:0.567386"
@@ -3278,6 +3278,7 @@
        transform="scale(0.93552781,1.0689153)"><tspan
          sodipodi:role="line"
          id="curr"
+         font-family="customFont"
          x="798.27936"
          y="489.22412"
          style="stroke-width:3.38333">00.00</tspan></text>
@@ -3291,6 +3292,7 @@
        transform="scale(0.91468297,1.093275)"><tspan
          sodipodi:role="line"
          id="volt"
+         font-family="customFont"
          x="818.5011"
          y="219.7659"
          style="stroke-width:3.38333">00.00</tspan></text>

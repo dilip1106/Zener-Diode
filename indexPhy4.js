@@ -27,6 +27,9 @@ localStorage.setItem("rowData", JSON.stringify(rowData));
 localStorage.setItem("fullScreen", false);
 localStorage.setItem("transitionDis", false);
 localStorage.setItem("circuitComplete", false);
+localStorage.setItem("current", 0);
+localStorage.setItem("voltage", 0);
+localStorage.setItem("newIndex", 0);
 var btnPressed = [false, false, false];
 
 setTimeout(() => {

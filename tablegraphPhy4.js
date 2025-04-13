@@ -33,9 +33,9 @@ var voltarrgraph= []
     function addTable(){
       if(localStorage.getItem("circuitComplete") === "true"){
         
-          srno = document.getElementsByClassName("srno1")[rowCountIndex];
-          current = document.getElementsByClassName(`curr1`)[rowCountIndex];
-          voltage = document.getElementsByClassName(`voltage1`)[rowCountIndex];
+          srno = document.getElementsByClassName("srno")[rowCountIndex];
+          current = document.getElementsByClassName(`curr`)[rowCountIndex];
+          voltage = document.getElementsByClassName(`voltage`)[rowCountIndex];
           
           
           let curr = localStorage.getItem("current")

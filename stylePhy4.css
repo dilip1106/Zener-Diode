@@ -86,7 +86,9 @@ div object{
 form{
     height: 50%;
 }
-
+.curr, .voltage{
+    width: 40%;
+}
 .table{
     display: flex;
     flex-direction: column;
@@ -126,7 +128,7 @@ table{
     margin-bottom: 0px;
 }
 
-.srno1, .voltage1, .curr1{
+.srno, .voltage, .curr{
     text-align: center;
     border: 0px;
     padding: 0 !important;
