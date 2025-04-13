@@ -17,9 +17,9 @@ const range = document.getElementById('range');
 
   range.addEventListener('input', (event) => {
 
-    if(sessionStorage.getItem("circuitComplete") == "true"){
+    if(localStorage.getItem("circuitComplete") == "true"){
       const newIndex = event.target.value;
-      sessionStorage.setItem("newIndex",newIndex)
+      localStorage.setItem("newIndex",newIndex)
     }
     else{
       alert("Complete the circuit first")
@@ -31,15 +31,15 @@ var voltarrgraph= []
   let rowCountIndex=0;
   let idx;
     function addTable(){
-      if(sessionStorage.getItem("circuitComplete") === "true"){
+      if(localStorage.getItem("circuitComplete") === "true"){
         
           srno = document.getElementsByClassName("srno1")[rowCountIndex];
           current = document.getElementsByClassName(`curr1`)[rowCountIndex];
           voltage = document.getElementsByClassName(`voltage1`)[rowCountIndex];
           
           
-          let curr = sessionStorage.getItem("current")
-          let volt = sessionStorage.getItem("voltage")
+          let curr = localStorage.getItem("current")
+          let volt = localStorage.getItem("voltage")
           currarrgraph.push(curr)
           voltarrgraph.push(volt)
           // console.log(currarrgraph)  

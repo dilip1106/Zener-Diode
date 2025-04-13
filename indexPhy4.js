@@ -1,6 +1,6 @@
 let type;
 
-wireTerminalCheck = [{ one: false , two: false},{  three: false , four: false},{five: false , six: false},{seven: false , eight: false},{nine:false,ten:false},{eleven:false,twelve:false}];
+wireTerminalCheck = [{ one: false , two: false},{  three: false , four: false},{five: false , thirteen: false},{seven: false , eight: false},{nine:false,ten:false},{eleven:false,twelve:false}];
 
 terminalMap = {
   0: "one",
@@ -15,6 +15,7 @@ terminalMap = {
   9:"ten",
   10:"eleven",
   11:"twelve",
+  12:"thirteen",
 };
 
 var xValues = [65, 60, 55, 50, 45, 40, 35, 30];
@@ -25,6 +26,7 @@ var rowData = { sno: 0, time: 0, volts: 0 };
 localStorage.setItem("rowData", JSON.stringify(rowData));
 localStorage.setItem("fullScreen", false);
 localStorage.setItem("transitionDis", false);
+localStorage.setItem("circuitComplete", false);
 var btnPressed = [false, false, false];
 
 setTimeout(() => {
@@ -110,10 +112,10 @@ function replacement() {
   //   checkbtnPressed(2);
   //   keyPut();
   // };
-  document.getElementById('black-board').classList.add('hidden')
+  // document.getElementById('black-board').classList.add('hidden')
   // document.getElementById('table-board').classList.add('replacement')
   localStorage.setItem("fullScreen", true);
-  sessionStorage.setItem("circuitComplete",true);
+  localStorage.setItem("circuitComplete",true);
 }
 
 function getRndInteger(min, max) {
@@ -187,7 +189,7 @@ function rangeSelector() {
   newIndexinterval = setInterval(() => {
     
 
-    let newIndex = sessionStorage.getItem("newIndex"); // Retrieve newIndex
+    let newIndex = localStorage.getItem("newIndex"); // Retrieve newIndex
     newIndex = Math.floor(newIndex / 10); // Map to range [1, 10]
 
     // Ensure newIndex stays within bounds of the array
@@ -204,8 +206,8 @@ function rangeSelector() {
     
    
 
-    sessionStorage.setItem("current", curarrforward[newIndex-1]);
-    sessionStorage.setItem("voltage", voltarr[newIndex - 1]);
+    localStorage.setItem("current", curarrforward[newIndex-1]);
+    localStorage.setItem("voltage", voltarr[newIndex - 1]);
   }, 500);
 }
 
